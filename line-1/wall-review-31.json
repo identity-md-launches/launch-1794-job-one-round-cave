@@ -1,0 +1,38 @@
+{
+  "record": 31,
+  "ancestor_sha256": "74973235129c9342d75f1354bfae1265c1f8f4e7507e9a963ea6c95f595d5ec7",
+  "output_sha256": "3767f4c32073fc2fab037ae1ea75fba9b040e518b4e70eeac56742654e359b0f",
+  "wall": {
+    "paths": [
+      "artifacts/line-1/wall.png",
+      "artifacts/line-1/wall-v11.png"
+    ],
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB"
+  },
+  "thumbnail": {
+    "path": "dist/line-1/31.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 76080
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "draft_sha256": "63234b4882a86bb1f9fdc52b7f780c12a2e384828e6f357162435d5f832c1e69",
+    "draft_retained": false
+  },
+  "preservation": "All pixels outside the new small ellipse are exactly ancestral; only generated charcoal/ochre pigment was blended with original rock relief inside it.",
+  "changed_pixels": 8930,
+  "unchanged_pixels": 1563586,
+  "changed_bounds_inclusive": [
+    288,
+    768,
+    408,
+    866
+  ],
+  "visual_review": "Inspected full PNG and decoded 512px JPEG. Original rock, cracks, torchlight, water, framing and ancestral paintings remain. Pepe retains the broad mouth and heavy-lidded eyes; both inherited hands show four fingers and a thumb (five each). The new bound ochre stone adds no hands. No letters, numbers, captions, signatures, logos, watermarks, frames, real people or prohibited symbols observed.",
+  "unmet_visual_requirements": []
+}

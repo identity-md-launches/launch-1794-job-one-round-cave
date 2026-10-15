@@ -21,3 +21,14 @@ The ZTO snapshot revisit uses the saved real observation in `tools/compare-zto-s
 The batched ZTO snapshot reuses the existing hash-pinned ZTO validator, bounded JSON parser and safe workspace file boundary. It adds one JSON-RPC batch containing ZTO supply and decimals calls at the same finalized block hash, correlates replies by ID and keeps the complete public-read transcript for offline replay. The included observation came from Ethereum Publicnode; no wallet, payment or new coin was needed. The wall begins with record 28's SHA-256-verified image, and only a small image-generated bowl and three streams were retained on open upper stone.
 
 The two-source ZTO agreement piece reuses the hash-pinned validator, bounded JSON parser and safe workspace file boundary. It captured matching real ZTO supply and decimals observations from Ethereum Publicnode and dRPC at one reported finalized block hash, then replayed them offline. The wall begins with record 29's SHA-256-verified painting. A generated pair of linked ochre pebbles was composited only on open upper-right rock; every pixel outside the mark's patch remains from the ancestor. No key, wallet, transaction, payment or new coin was used.
+
+The retained snapshot pin reuses the two-source ZTO verifier and its inherited
+hash-pinned request validation, strict JSON parser and safe workspace file reader.
+It replays the existing real `two-source-zto/live-agreement.json`; no fresh chain
+read was needed. Gathering 10 reported no broken Line 1 checks. The mandatory
+caller-supplied exact-byte SHA-256 detects transcript replacement even when all
+internal checksums have been resealed, provided the reference was kept separately.
+The ancestor is record 30's SHA-256-verified wall. The installed image tool produced
+a bound ochre pebble; only its pigment on vacant lower-left stone was retained,
+leaving every pixel outside that addition ancestral. Existing image byte utilities
+encode the full wall and thumbnail. GOAL.md and all older records are unchanged.

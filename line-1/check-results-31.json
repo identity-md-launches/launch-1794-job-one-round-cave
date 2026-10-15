@@ -1,0 +1,61 @@
+{
+  "tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "line-1/tools/retained-snapshot-pin",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stderr": "test_bad_pin_before_file_access (test_pin.PinTests.test_bad_pin_before_file_access) ... ok\ntest_byte_limit (test_pin.PinTests.test_byte_limit) ... ok\ntest_cli (test_pin.PinTests.test_cli) ... ok\ntest_input_unchanged (test_pin.PinTests.test_input_unchanged) ... ok\ntest_matching_hash_does_not_bypass_replay (test_pin.PinTests.test_matching_hash_does_not_bypass_replay) ... ok\ntest_not_bytes (test_pin.PinTests.test_not_bytes) ... ok\ntest_paths_refused (test_pin.PinTests.test_paths_refused) ... ok\ntest_pin_format (test_pin.PinTests.test_pin_format) ... ok\ntest_real_saved_observation (test_pin.PinTests.test_real_saved_observation) ... ok\ntest_replaced_pin_also_passes_documented_limit (test_pin.PinTests.test_replaced_pin_also_passes_documented_limit) ... ok\ntest_replay_offline (test_pin.PinTests.test_replay_offline) ... ok\ntest_resealed_consistent_substitution_rejected_by_retained_pin (test_pin.PinTests.test_resealed_consistent_substitution_rejected_by_retained_pin) ... ok\ntest_resealed_disagreement_rejected_even_with_new_pin (test_pin.PinTests.test_resealed_disagreement_rejected_even_with_new_pin) ... ok\ntest_whitespace_changes_exact_pin (test_pin.PinTests.test_whitespace_changes_exact_pin) ... ok\ntest_whitespace_with_new_pin_is_valid (test_pin.PinTests.test_whitespace_with_new_pin_is_valid) ... ok\ntest_wrong_pin (test_pin.PinTests.test_wrong_pin) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.022s\n\nOK\n"
+  },
+  "demo": {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/retained-snapshot-pin/pin.py",
+      "line-1/tools/two-source-zto/live-agreement.json",
+      "--expected-sha256",
+      "bb1ce8c232f7d62e83341d3da502a340ce2f8da12cf84580bcc537a3bf3ccb19"
+    ],
+    "exit_code": 0,
+    "result": {
+      "file_bytes": 36796,
+      "file_sha256": "bb1ce8c232f7d62e83341d3da502a340ce2f8da12cf84580bcc537a3bf3ccb19",
+      "limits": "Equality to caller-supplied bytes, not provider authenticity, a state proof, freshness, or independent custody of the pin.",
+      "observation": {
+        "block_hash": "0x12449302b51c7c97a83dfb6de021ddab5bf4ed2a0e9ca6cc5ca29d6a6c96a944",
+        "block_number": 26193822,
+        "decimals": 18,
+        "evidence": "Provider observations, not a consensus or state proof",
+        "sources": [
+          "https://ethereum-rpc.publicnode.com",
+          "https://eth.drpc.org"
+        ],
+        "status": "two_sources_agree_on_hash_pinned_zto",
+        "total_supply_raw": "1000000000000000000000000000",
+        "total_supply_tokens": "1000000000.000000000000000000",
+        "transcript_sha256": "9bcd3bf7d8bcbce199a41c15628f3dab7c523415c6091ac04d813fee224a51c7",
+        "zto_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+      },
+      "status": "retained_file_pin_and_two_source_replay_match"
+    }
+  },
+  "checks": {
+    "goal_unchanged": true,
+    "older_records_unchanged": true,
+    "record_count": 31,
+    "record_hash_matches_wall": true,
+    "wall_alias_matches": true,
+    "scope_check_passed": true,
+    "new_files_under_100KB_outside_artifacts": true,
+    "named_wall_untracked": true
+  },
+  "visual_review": "line-1/wall-review-31.json"
+}
