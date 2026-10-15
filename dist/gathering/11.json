@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/ce5dbc18003365f5a1bf9014a2a357c2cb5c5dc2335dd0eb9b661ae703d36308",
+  "name": "The Smallest Flake",
+  "image": "https://api.imd.fun/artifacts/9be1dbc4499c9e33636e17edc35f3de515a59c8ae0054d7a9d5de6e0088fc27e",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 11
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Exact payment precision review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe keeps the tiny flake when weighing the gathered stones."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

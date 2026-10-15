@@ -1,0 +1,184 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/test_precision_payment.py"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "",
+    "stderr": "test_actual_rounded_amount_rejected (__main__.PrecisionPaymentTests.test_actual_rounded_amount_rejected) ... ok\ntest_cli_exit_codes_and_no_partial_output (__main__.PrecisionPaymentTests.test_cli_exit_codes_and_no_partial_output) ... ok\ntest_equal_digest_unsafe_numeric_literal_rejected (__main__.PrecisionPaymentTests.test_equal_digest_unsafe_numeric_literal_rejected) ... ok\ntest_expected_digest_required (__main__.PrecisionPaymentTests.test_expected_digest_required) ... ok\ntest_hex_string_preserves_exact_value (__main__.PrecisionPaymentTests.test_hex_string_preserves_exact_value) ... ok\ntest_immutability_and_no_network (__main__.PrecisionPaymentTests.test_immutability_and_no_network) ... ok\ntest_independent_domain_and_type_are_gates (__main__.PrecisionPaymentTests.test_independent_domain_and_type_are_gates) ... ok\ntest_matching_request_cannot_bypass_payment_shortfall (__main__.PrecisionPaymentTests.test_matching_request_cannot_bypass_payment_shortfall) ... ok\ntest_no_large_json_integers_in_output (__main__.PrecisionPaymentTests.test_no_large_json_integers_in_output) ... ok\ntest_no_verifier_is_explicit (__main__.PrecisionPaymentTests.test_no_verifier_is_explicit) ... ok\ntest_one_unit_change_rejected (__main__.PrecisionPaymentTests.test_one_unit_change_rejected) ... ok\ntest_real_zto_exact_string (__main__.PrecisionPaymentTests.test_real_zto_exact_string) ... ok\ntest_report_bound_fails_closed (__main__.PrecisionPaymentTests.test_report_bound_fails_closed) ... ok\ntest_strict_input_boundary (__main__.PrecisionPaymentTests.test_strict_input_boundary) ... ok\ntest_transcript_cannot_change_independent_policy (__main__.PrecisionPaymentTests.test_transcript_cannot_change_independent_policy) ... ok\ntest_wrong_prior_digest_rejected (__main__.PrecisionPaymentTests.test_wrong_prior_digest_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.955s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/precision_payment.py",
+      "shared/payment-evidence/example.transcript.json",
+      "shared/payment-evidence/example.policy.json",
+      "shared/payment-evidence/example.typed-data.json",
+      "--chain-id",
+      "1",
+      "--name",
+      "Read-only Payment Evidence",
+      "--version",
+      "1",
+      "--primary-type",
+      "PaymentEvidence",
+      "--no-verifier",
+      "--expect-digest",
+      "0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "{\n  \"accepted\": true,\n  \"state\": \"exact_payment_review_matches\",\n  \"alerts\": [],\n  \"paymentAccepted\": true,\n  \"clientMatchesPaymentCommitment\": true,\n  \"domainAndPrimaryTypeMatch\": true,\n  \"paymentMatchesExpectedDigest\": true,\n  \"paymentCommitment\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n  \"integerReview\": {\n    \"reviewVersion\": 1,\n    \"primaryType\": \"PaymentEvidence\",\n    \"typeEncoding\": \"PaymentEvidence(bytes32 transactionHash,address token,address recipient,uint256 minimumRaw,uint256 confirmations,bool requireFinalized,bytes32 transcriptHash)\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xf770b87ef4056d6cb901367668082b8425381e59a66a2890b7d0c1384b8e0822\",\n    \"digest\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n    \"integers\": [\n      {\n        \"path\": \"/domain/chainId\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"1\",\n        \"exactDecimal\": \"1\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x0000000000000000000000000000000000000000000000000000000000000001\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"1\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/minimumRaw\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"decimal_string\",\n        \"parsedValue\": \"166357571280020680094504\",\n        \"exactDecimal\": \"166357571280020680094504\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x00000000000000000000000000000000000000000000233a43130efdb61e3328\",\n        \"requiresExactIntegerHandling\": true,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"166357571280020678115328\",\n          \"deltaDecimal\": \"-1979176\",\n          \"changesValue\": true,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/confirmations\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"12\",\n        \"exactDecimal\": \"12\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x000000000000000000000000000000000000000000000000000000000000000c\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"12\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      }\n    ],\n    \"integerCount\": 3,\n    \"requiresExactIntegerHandling\": true,\n    \"hasUnsafeJsonNumbers\": false,\n    \"binary64CoercionChangesValue\": true,\n    \"interpretation\": \"Original exact integers determine the digest. Binary64 values are hypothetical nearest-even conversions, never substituted. Strings preserve input values but later Number coercion may lose precision. No units, token decimals or business meaning are inferred. No numeric cues does not mean approval.\",\n    \"matchesExpected\": true\n  },\n  \"providerAuthenticated\": false,\n  \"evidenceMode\": \"offline historical RPC observations\",\n  \"limits\": \"Historical provider assertions, not current settlement or a state proof. Caller policy, domain, type and digest must be independently chosen. Exact strings can still lose precision if later coerced to Number. A matching review authorizes no signature, token permit or payment.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/precision_payment.py",
+      "shared/payment-evidence/example.transcript.json",
+      "shared/payment-evidence/example.policy.json",
+      "shared/payment-evidence/example.precision-numeric.json",
+      "--chain-id",
+      "1",
+      "--name",
+      "Read-only Payment Evidence",
+      "--version",
+      "1",
+      "--primary-type",
+      "PaymentEvidence",
+      "--no-verifier",
+      "--expect-digest",
+      "0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 1,
+    "exitCode": 1,
+    "passed": true,
+    "stdout": "{\n  \"accepted\": false,\n  \"state\": \"review_required\",\n  \"alerts\": [\n    \"unsafe_integer_literal_in_client\"\n  ],\n  \"paymentAccepted\": true,\n  \"clientMatchesPaymentCommitment\": true,\n  \"domainAndPrimaryTypeMatch\": true,\n  \"paymentMatchesExpectedDigest\": true,\n  \"paymentCommitment\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n  \"integerReview\": {\n    \"reviewVersion\": 1,\n    \"primaryType\": \"PaymentEvidence\",\n    \"typeEncoding\": \"PaymentEvidence(bytes32 transactionHash,address token,address recipient,uint256 minimumRaw,uint256 confirmations,bool requireFinalized,bytes32 transcriptHash)\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xf770b87ef4056d6cb901367668082b8425381e59a66a2890b7d0c1384b8e0822\",\n    \"digest\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n    \"integers\": [\n      {\n        \"path\": \"/domain/chainId\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"1\",\n        \"exactDecimal\": \"1\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x0000000000000000000000000000000000000000000000000000000000000001\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"1\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/minimumRaw\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"166357571280020680094504\",\n        \"exactDecimal\": \"166357571280020680094504\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x00000000000000000000000000000000000000000000233a43130efdb61e3328\",\n        \"requiresExactIntegerHandling\": true,\n        \"unsafeJsonNumber\": true,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"166357571280020678115328\",\n          \"deltaDecimal\": \"-1979176\",\n          \"changesValue\": true,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/confirmations\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"12\",\n        \"exactDecimal\": \"12\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x000000000000000000000000000000000000000000000000000000000000000c\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"12\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      }\n    ],\n    \"integerCount\": 3,\n    \"requiresExactIntegerHandling\": true,\n    \"hasUnsafeJsonNumbers\": true,\n    \"binary64CoercionChangesValue\": true,\n    \"interpretation\": \"Original exact integers determine the digest. Binary64 values are hypothetical nearest-even conversions, never substituted. Strings preserve input values but later Number coercion may lose precision. No units, token decimals or business meaning are inferred. No numeric cues does not mean approval.\",\n    \"matchesExpected\": true\n  },\n  \"providerAuthenticated\": false,\n  \"evidenceMode\": \"offline historical RPC observations\",\n  \"limits\": \"Historical provider assertions, not current settlement or a state proof. Caller policy, domain, type and digest must be independently chosen. Exact strings can still lose precision if later coerced to Number. A matching review authorizes no signature, token permit or payment.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/precision_payment.py",
+      "shared/payment-evidence/example.transcript.json",
+      "shared/payment-evidence/example.policy.json",
+      "shared/payment-evidence/example.typed-data.json",
+      "--chain-id",
+      "2",
+      "--name",
+      "Read-only Payment Evidence",
+      "--version",
+      "1",
+      "--primary-type",
+      "PaymentEvidence",
+      "--no-verifier",
+      "--expect-digest",
+      "0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 1,
+    "exitCode": 1,
+    "passed": true,
+    "stdout": "{\n  \"accepted\": false,\n  \"state\": \"review_required\",\n  \"alerts\": [\n    \"independent_domain_or_primary_type_mismatch\"\n  ],\n  \"paymentAccepted\": true,\n  \"clientMatchesPaymentCommitment\": true,\n  \"domainAndPrimaryTypeMatch\": false,\n  \"paymentMatchesExpectedDigest\": true,\n  \"paymentCommitment\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n  \"integerReview\": {\n    \"reviewVersion\": 1,\n    \"primaryType\": \"PaymentEvidence\",\n    \"typeEncoding\": \"PaymentEvidence(bytes32 transactionHash,address token,address recipient,uint256 minimumRaw,uint256 confirmations,bool requireFinalized,bytes32 transcriptHash)\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xf770b87ef4056d6cb901367668082b8425381e59a66a2890b7d0c1384b8e0822\",\n    \"digest\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n    \"integers\": [\n      {\n        \"path\": \"/domain/chainId\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"1\",\n        \"exactDecimal\": \"1\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x0000000000000000000000000000000000000000000000000000000000000001\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"1\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/minimumRaw\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"decimal_string\",\n        \"parsedValue\": \"166357571280020680094504\",\n        \"exactDecimal\": \"166357571280020680094504\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x00000000000000000000000000000000000000000000233a43130efdb61e3328\",\n        \"requiresExactIntegerHandling\": true,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"166357571280020678115328\",\n          \"deltaDecimal\": \"-1979176\",\n          \"changesValue\": true,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/confirmations\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"12\",\n        \"exactDecimal\": \"12\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x000000000000000000000000000000000000000000000000000000000000000c\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"12\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      }\n    ],\n    \"integerCount\": 3,\n    \"requiresExactIntegerHandling\": true,\n    \"hasUnsafeJsonNumbers\": false,\n    \"binary64CoercionChangesValue\": true,\n    \"interpretation\": \"Original exact integers determine the digest. Binary64 values are hypothetical nearest-even conversions, never substituted. Strings preserve input values but later Number coercion may lose precision. No units, token decimals or business meaning are inferred. No numeric cues does not mean approval.\",\n    \"matchesExpected\": true\n  },\n  \"providerAuthenticated\": false,\n  \"evidenceMode\": \"offline historical RPC observations\",\n  \"limits\": \"Historical provider assertions, not current settlement or a state proof. Caller policy, domain, type and digest must be independently chosen. Exact strings can still lose precision if later coerced to Number. A matching review authorizes no signature, token permit or payment.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/precision_payment.py",
+      "shared/payment-evidence/example.transcript.json",
+      "shared/payment-evidence/example.policy.json",
+      "shared/payment-evidence/example.typed-data.json",
+      "--chain-id",
+      "1",
+      "--name",
+      "Read-only Payment Evidence",
+      "--version",
+      "1",
+      "--primary-type",
+      "PaymentEvidence",
+      "--no-verifier",
+      "--expect-digest",
+      "0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c"
+    ],
+    "workingDirectory": "test/scratch/portable11",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "{\n  \"accepted\": true,\n  \"state\": \"exact_payment_review_matches\",\n  \"alerts\": [],\n  \"paymentAccepted\": true,\n  \"clientMatchesPaymentCommitment\": true,\n  \"domainAndPrimaryTypeMatch\": true,\n  \"paymentMatchesExpectedDigest\": true,\n  \"paymentCommitment\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n  \"integerReview\": {\n    \"reviewVersion\": 1,\n    \"primaryType\": \"PaymentEvidence\",\n    \"typeEncoding\": \"PaymentEvidence(bytes32 transactionHash,address token,address recipient,uint256 minimumRaw,uint256 confirmations,bool requireFinalized,bytes32 transcriptHash)\",\n    \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n    \"messageHash\": \"0xf770b87ef4056d6cb901367668082b8425381e59a66a2890b7d0c1384b8e0822\",\n    \"digest\": \"0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c\",\n    \"integers\": [\n      {\n        \"path\": \"/domain/chainId\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"1\",\n        \"exactDecimal\": \"1\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x0000000000000000000000000000000000000000000000000000000000000001\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"1\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/minimumRaw\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"decimal_string\",\n        \"parsedValue\": \"166357571280020680094504\",\n        \"exactDecimal\": \"166357571280020680094504\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x00000000000000000000000000000000000000000000233a43130efdb61e3328\",\n        \"requiresExactIntegerHandling\": true,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"166357571280020678115328\",\n          \"deltaDecimal\": \"-1979176\",\n          \"changesValue\": true,\n          \"outsideDeclaredRange\": false\n        }\n      },\n      {\n        \"path\": \"/message/confirmations\",\n        \"type\": \"uint256\",\n        \"widthBits\": 256,\n        \"signed\": false,\n        \"inputForm\": \"json_integer\",\n        \"parsedValue\": \"12\",\n        \"exactDecimal\": \"12\",\n        \"minimumDecimal\": \"0\",\n        \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n        \"word\": \"0x000000000000000000000000000000000000000000000000000000000000000c\",\n        \"requiresExactIntegerHandling\": false,\n        \"unsafeJsonNumber\": false,\n        \"binary64Coercion\": {\n          \"nearestIntegerDecimal\": \"12\",\n          \"deltaDecimal\": \"0\",\n          \"changesValue\": false,\n          \"outsideDeclaredRange\": false\n        }\n      }\n    ],\n    \"integerCount\": 3,\n    \"requiresExactIntegerHandling\": true,\n    \"hasUnsafeJsonNumbers\": false,\n    \"binary64CoercionChangesValue\": true,\n    \"interpretation\": \"Original exact integers determine the digest. Binary64 values are hypothetical nearest-even conversions, never substituted. Strings preserve input values but later Number coercion may lose precision. No units, token decimals or business meaning are inferred. No numeric cues does not mean approval.\",\n    \"matchesExpected\": true\n  },\n  \"providerAuthenticated\": false,\n  \"evidenceMode\": \"offline historical RPC observations\",\n  \"limits\": \"Historical provider assertions, not current settlement or a state proof. Caller policy, domain, type and digest must be independently chosen. Exact strings can still lose precision if later coerced to Number. A matching review authorizes no signature, token permit or payment.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "shared/payment-evidence/test_precision_payment.py"
+    ],
+    "workingDirectory": "test/scratch/portable11",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "",
+    "stderr": "test_actual_rounded_amount_rejected (__main__.PrecisionPaymentTests.test_actual_rounded_amount_rejected) ... ok\ntest_cli_exit_codes_and_no_partial_output (__main__.PrecisionPaymentTests.test_cli_exit_codes_and_no_partial_output) ... ok\ntest_equal_digest_unsafe_numeric_literal_rejected (__main__.PrecisionPaymentTests.test_equal_digest_unsafe_numeric_literal_rejected) ... ok\ntest_expected_digest_required (__main__.PrecisionPaymentTests.test_expected_digest_required) ... ok\ntest_hex_string_preserves_exact_value (__main__.PrecisionPaymentTests.test_hex_string_preserves_exact_value) ... ok\ntest_immutability_and_no_network (__main__.PrecisionPaymentTests.test_immutability_and_no_network) ... ok\ntest_independent_domain_and_type_are_gates (__main__.PrecisionPaymentTests.test_independent_domain_and_type_are_gates) ... ok\ntest_matching_request_cannot_bypass_payment_shortfall (__main__.PrecisionPaymentTests.test_matching_request_cannot_bypass_payment_shortfall) ... ok\ntest_no_large_json_integers_in_output (__main__.PrecisionPaymentTests.test_no_large_json_integers_in_output) ... ok\ntest_no_verifier_is_explicit (__main__.PrecisionPaymentTests.test_no_verifier_is_explicit) ... ok\ntest_one_unit_change_rejected (__main__.PrecisionPaymentTests.test_one_unit_change_rejected) ... ok\ntest_real_zto_exact_string (__main__.PrecisionPaymentTests.test_real_zto_exact_string) ... ok\ntest_report_bound_fails_closed (__main__.PrecisionPaymentTests.test_report_bound_fails_closed) ... ok\ntest_strict_input_boundary (__main__.PrecisionPaymentTests.test_strict_input_boundary) ... ok\ntest_transcript_cannot_change_independent_policy (__main__.PrecisionPaymentTests.test_transcript_cannot_change_independent_policy) ... ok\ntest_wrong_prior_digest_rejected (__main__.PrecisionPaymentTests.test_wrong_prior_digest_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.992s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-4/tools/integer-review/integer_review.py",
+      "line-4/tools/integer-review/zto-numeric-literal.json",
+      "--expect",
+      "0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 1,
+    "exitCode": 1,
+    "passed": true,
+    "stdout": "{\n  \"reviewVersion\": 1,\n  \"primaryType\": \"PaymentEvidence\",\n  \"typeEncoding\": \"PaymentEvidence(bytes32 transactionHash,address token,address recipient,uint256 minimumRaw,uint256 confirmations,bool requireFinalized,bytes32 transcriptHash)\",\n  \"domainSeparator\": \"0xb841b9b4b38823bdf4340d649cbad52a49cb75b55ddd1f91b457246dcb4f807d\",\n  \"messageHash\": \"0xac6db73f194d768dad814f953bcc998a7338581d687e8a9107ca85ed94077599\",\n  \"digest\": \"0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774\",\n  \"integers\": [\n    {\n      \"path\": \"/domain/chainId\",\n      \"type\": \"uint256\",\n      \"widthBits\": 256,\n      \"signed\": false,\n      \"inputForm\": \"json_integer\",\n      \"parsedValue\": \"1\",\n      \"exactDecimal\": \"1\",\n      \"minimumDecimal\": \"0\",\n      \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n      \"word\": \"0x0000000000000000000000000000000000000000000000000000000000000001\",\n      \"requiresExactIntegerHandling\": false,\n      \"unsafeJsonNumber\": false,\n      \"binary64Coercion\": {\n        \"nearestIntegerDecimal\": \"1\",\n        \"deltaDecimal\": \"0\",\n        \"changesValue\": false,\n        \"outsideDeclaredRange\": false\n      }\n    },\n    {\n      \"path\": \"/message/minimumRaw\",\n      \"type\": \"uint256\",\n      \"widthBits\": 256,\n      \"signed\": false,\n      \"inputForm\": \"json_integer\",\n      \"parsedValue\": \"166357571280020680094504\",\n      \"exactDecimal\": \"166357571280020680094504\",\n      \"minimumDecimal\": \"0\",\n      \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n      \"word\": \"0x00000000000000000000000000000000000000000000233a43130efdb61e3328\",\n      \"requiresExactIntegerHandling\": true,\n      \"unsafeJsonNumber\": true,\n      \"binary64Coercion\": {\n        \"nearestIntegerDecimal\": \"166357571280020678115328\",\n        \"deltaDecimal\": \"-1979176\",\n        \"changesValue\": true,\n        \"outsideDeclaredRange\": false\n      }\n    },\n    {\n      \"path\": \"/message/confirmations\",\n      \"type\": \"uint256\",\n      \"widthBits\": 256,\n      \"signed\": false,\n      \"inputForm\": \"json_integer\",\n      \"parsedValue\": \"12\",\n      \"exactDecimal\": \"12\",\n      \"minimumDecimal\": \"0\",\n      \"maximumDecimal\": \"115792089237316195423570985008687907853269984665640564039457584007913129639935\",\n      \"word\": \"0x000000000000000000000000000000000000000000000000000000000000000c\",\n      \"requiresExactIntegerHandling\": false,\n      \"unsafeJsonNumber\": false,\n      \"binary64Coercion\": {\n        \"nearestIntegerDecimal\": \"12\",\n        \"deltaDecimal\": \"0\",\n        \"changesValue\": false,\n        \"outsideDeclaredRange\": false\n      }\n    }\n  ],\n  \"integerCount\": 3,\n  \"requiresExactIntegerHandling\": true,\n  \"hasUnsafeJsonNumbers\": true,\n  \"binary64CoercionChangesValue\": true,\n  \"interpretation\": \"Original exact integers determine the digest. Binary64 values are hypothetical nearest-even conversions, never substituted. Strings preserve input values but later Number coercion may lose precision. No units, token decimals or business meaning are inferred. No numeric cues does not mean approval.\",\n  \"matchesExpected\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-2/tools/batch-guard/review.py",
+      "line-2/tools/batch-guard/mixed.report.json",
+      "line-2/tools/json-contract/report.contract.json",
+      "line-2/tools/json-contract/report.example.json",
+      "line-2/tools/rule-locator/report.invalid.json"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "{\n  \"matches\": true,\n  \"report_sha256\": \"b9cf2c2a673c515b7b2d7fb24a6c9318e0fa956e01c3bf8b55b6ccb2ef8f5c75\",\n  \"status\": \"batch_report_reproduced\",\n  \"all_documents_valid\": false,\n  \"summary\": {\n    \"checked\": 2,\n    \"passed\": 1,\n    \"failed\": 1,\n    \"unreadable\": 0\n  },\n  \"error_count\": 3\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "line-1/tools/two-source-zto/agreement.py",
+      "--verify",
+      "gathering/live-agreement-11.json"
+    ],
+    "workingDirectory": ".",
+    "expectedExit": 0,
+    "exitCode": 0,
+    "passed": true,
+    "stdout": "{\n  \"block_hash\": \"0x48d0f22ba0c1e929c50e11edebe9e54296ace91377de6fd201829492ede94a73\",\n  \"block_number\": 26194238,\n  \"decimals\": 18,\n  \"evidence\": \"Provider observations, not a consensus or state proof\",\n  \"sources\": [\n    \"https://ethereum-rpc.publicnode.com\",\n    \"https://eth.drpc.org\"\n  ],\n  \"status\": \"two_sources_agree_on_hash_pinned_zto\",\n  \"total_supply_raw\": \"1000000000000000000000000000\",\n  \"total_supply_tokens\": \"1000000000.000000000000000000\",\n  \"transcript_sha256\": \"109db1f5d6494722e4e2688e6c29ff6415dd204300fc6077816c8f56761ea56b\",\n  \"zto_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\"\n}\n",
+    "stderr": ""
+  }
+]

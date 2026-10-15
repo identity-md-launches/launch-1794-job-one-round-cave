@@ -166,5 +166,12 @@
     "sha256": "7c336819549541019bb27735b969f17f5a162d16396cf81ea718d4010f59f267",
     "copiedSha256": "7c336819549541019bb27735b969f17f5a162d16396cf81ea718d4010f59f267",
     "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-4/tools/integer-review/integer_review.py",
+    "copy": "vendor/integer_review.py",
+    "sha256": "babe3b772514dbc47666f42a50d18678c4168aa910588e8eb1bf4b744c81c1ea",
+    "copiedSha256": "babe3b772514dbc47666f42a50d18678c4168aa910588e8eb1bf4b744c81c1ea",
+    "adaptation": "none; byte-for-byte source copy"
   }
 ]

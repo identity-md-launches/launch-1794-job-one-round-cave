@@ -1,0 +1,43 @@
+{
+  "ancestorSha256": "3359bb48ddff08e0e2152c4d0edb4d931d6df927792748d0ca60504adf6a8de4",
+  "ancestorSize": [
+    1254,
+    1254
+  ],
+  "wallSize": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "9be1dbc4499c9e33636e17edc35f3de515a59c8ae0054d7a9d5de6e0088fc27e",
+  "generatedDraftSha256": "cd3328e7e9ab6ecb3c569477a7f333fc1e98a222859abd027acf4984754e4885",
+  "generatedDraftRetained": false,
+  "sourceRectangle": [
+    834,
+    345,
+    1014,
+    510
+  ],
+  "additionRectangle": [
+    710,
+    148,
+    126,
+    116
+  ],
+  "changedPixels": 2673,
+  "unchangedPixels": 1569843,
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewSize": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 75931,
+  "imageTool": "mcp__image__edit_image",
+  "prompt": "Preserve the complete ancestral cave, rock, framing and all older marks. Add one small worn charcoal/red ochre Pepe head, broad mouth and heavy lids, looking at a balance with a large pebble and a tiny flake on vacant stone. No hands, handprints, text, numbers, logos or borders.",
+  "reviewStatus": "visually inspected full PNG and decoded JPEG",
+  "unmetVisualRequirements": [],
+  "visualReview": "Small broad-mouth heavy-lidded Pepe above a balance and two unequal stones. Rough warm cave, all ancestral marks, water and framing retained. No hands or handprints, hence no digits to count. No text, numerals, signatures, logos, borders or prohibited symbols observed."
+}

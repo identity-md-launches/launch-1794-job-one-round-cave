@@ -596,3 +596,70 @@ can pass. The wrapper does not establish independent operators, recipient
 ownership, invoice provenance, payment deduplication, authorization or contract
 support. Use the older paired/time tools for their separate policies; this command
 does not claim to incorporate those checks.
+
+## Gathering 11: exact payment precision review
+
+`precision_payment.py` connects Line 4's exact-integer reviewer to Line 3's
+historical payment check, Line 2's explicit structural contracts, and the existing
+independent domain/type binding. The unchanged integer reviewer is copied into
+`vendor/integer_review.py`; `provenance.json` records its source and copy hashes.
+Copy this complete folder to use it without any line folder or installed package.
+Python 3.10+ and a POSIX no-follow filesystem are sufficient; no network is used.
+
+One command from the repository root:
+
+```sh
+python3 -B shared/payment-evidence/precision_payment.py shared/payment-evidence/example.transcript.json shared/payment-evidence/example.policy.json shared/payment-evidence/example.typed-data.json --chain-id 1 --name 'Read-only Payment Evidence' --version 1 --primary-type PaymentEvidence --no-verifier --expect-digest 0x41d9999db383e39c78be45661d68307592ad1b8da2fcace128efcfa5e4e29d2c
+```
+
+Tried: exit **0**, `exact_payment_review_matches`. The historical real Ethereum
+ZTO evidence passes payment policy, client commitment, domain/type and expected
+digest checks. The amount `166357571280020680094504` stays an exact decimal string.
+A hypothetical binary64 conversion loses **1,979,176 raw units**. Acceptance does
+not suppress that warning: the per-field report retains exact decimal values,
+32-byte words, input forms, safe-integer status and hypothetical conversion deltas.
+All potentially large output integers are strings, so the report preserves them
+when parsed by a JavaScript JSON consumer.
+
+Replace the client path with
+`shared/payment-evidence/example.precision-numeric.json` to see exit **1**,
+`unsafe_integer_literal_in_client`, despite an identical digest and passing
+payment/domain checks. That fixture changes only the representation of the saved
+amount into a JSON integer literal. It is a representation experiment, not new
+chain evidence. The tool neither rounds nor repairs either file. Saved results:
+`example.precision-payment.json` and `example.precision-rejection.json`.
+
+For real use, supply the actual captured client typed data, independently chosen
+payment policy, exact expected domain and primary type, and an independently
+retained digest. This demo digest belongs to this shared transcript; the Line 4
+standalone fixture commits to a different transcript and has a different digest.
+Do not substitute one for the other or derive fresh approval from an incoming
+file. `--no-verifier` explicitly requires absence; alternatively use `--verifier`
+and optional `--salt` for independent expectations. The current PaymentEvidence
+content schema has no verifier. No contract support or token permit is implied.
+
+Exit **0** means all inherited binding gates pass and no reachable integer literal
+exceeds the JavaScript safe-integer interval. Exit **1** means a gate differs or
+an unsafe literal requires review. Exit **2** means invalid/refused input or an
+output bound; only a small failure object is emitted. Exact strings can still lose
+precision if later converted to Number. A match is never signing/payment approval.
+The review does not authenticate providers, prove Ethereum state or consensus,
+establish current settlement, enforce freshness or independently validate crypto.
+Use the separate freshness, paired-provider and ancestry tools for their checks.
+
+Inputs retain the inherited strict UTF-8/JSON parser, duplicate/float/nonfinite
+rejection, 65,536-byte regular-file limit, no-follow workspace reader, tree and
+encoding bounds. The complete ASCII report is capped at 100,000 bytes; no partial
+success is emitted. Trusted sibling code and contracts are required. These bounds
+are not a CPU-time guarantee. No environment, secret, key or wallet is read; no
+request is dispatched, signed, posted, paid or deployed.
+
+```sh
+python3 -B shared/payment-evidence/test_precision_payment.py
+```
+
+All **16 integration tests** pass here and in a detached copy without line folders.
+They cover exact real ZTO replay, equal-digest numeric rejection, one-unit/rounded
+amount changes, independent digest/domain/type/verifier checks, payment shortfall,
+policy substitution, hex-string equivalence, immutability, disabled network,
+JavaScript-safe report integers, output bounds, strict inputs and CLI outcomes.

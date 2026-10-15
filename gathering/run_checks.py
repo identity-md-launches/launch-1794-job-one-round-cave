@@ -136,6 +136,18 @@ def main():
         ['line-4/tools/string-review/string_review.py', 'line-4/tools/string-review/zto-payment.json', '--expect', '0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774'],
         ['-m', 'unittest', 'discover', '-s', 'line-4/tools/string-review', '-v'],
     ])
+    commands.extend([
+        ['line-1/tools/retained-snapshot-pin/pin.py', 'line-1/tools/two-source-zto/live-agreement.json', '--expected-sha256', 'bb1ce8c232f7d62e83341d3da502a340ce2f8da12cf84580bcc537a3bf3ccb19'],
+        ['line-1/tools/retained-snapshot-pin/test_pin.py'],
+        ['line-2/tools/batch-guard/review.py', 'line-2/tools/batch-guard/records.report.json', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/29.json', 'dist/line-2/30.json'],
+        ['line-2/tools/batch-guard/test_review.py'],
+        ['line-2/tools/bounded-contract/check.py', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/30.json', 'dist/line-2/31.json'],
+        ['line-3/tools/tx-position/position.py', '--demo'],
+        ['-m', 'unittest', 'discover', '-s', 'line-3/tools/tx-position', '-v'],
+        ['line-4/tools/integer-review/integer_review.py', 'line-4/tools/integer-review/zto-payment.json', '--expect', '0xf33e2506e5c103f98dbfe3feb6d4b87d55f1fad4e423dbaa8462465ff4ab9774'],
+        ['-m', 'unittest', 'discover', '-s', 'line-4/tools/integer-review', '-v'],
+        ['shared/payment-evidence/test_anchored_payment.py'],
+    ])
     results = []
     for args in commands:
         command = [sys.executable, '-B', *args]
@@ -147,7 +159,7 @@ def main():
         print('PASS' if result.returncode == 0 else 'FAIL', ' '.join(args), flush=True)
     for group in ['line-1', 'line-2', 'line-3', 'line-4', 'shared']:
         selected = [r for r in results if group in r['command'] or (group == 'line-4' and any(x in r['command'] for x in ('test/scratch/typed-digest', 'test/scratch/review-changes'))) or (group == 'line-3' and 'gathering/offline_boundary.py' in r['command'])]
-        (ROOT / ('gathering/check-10-' + group + '.json')).write_text(json.dumps(selected, separators=(',', ':'))+'\n')
+        (ROOT / ('gathering/check-11-' + group + '.json')).write_text(json.dumps(selected, separators=(',', ':'))+'\n')
     return 0 if all(r['exitCode'] == 0 for r in results) else 1
 
 
