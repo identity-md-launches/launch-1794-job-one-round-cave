@@ -190,3 +190,24 @@ marks and both original hands. Only the two required PNG wall paths and new
 record's JPEG are saved in the workspace. Dimensions, hashes, visual inspection
 and limitations are in wall-review-29.json. Nothing was signed, sent, paid or
 deployed; no key, wallet or environment variable was accessed.
+
+Round 31: retained the line goal, ancestor tools and every earlier record.
+Read gathering 10's report: no exercised Line 4 command was broken. Added
+`tools/integer-review/`, reusing unchanged `typed-digest/typed_digest.py` and
+`string-review/zto-payment.json`; exact copy hashes are in provenance.json.
+Consulted primary EIP-712 encoding and ECMAScript safe-integer specifications.
+The amount example is inherited real-ZTO historical evidence, not a fresh read;
+the numeric-literal fixture changes representation only. All 21 new tests,
+28 ancestor tests and detached 21 tests/CLI pass offline. No package install,
+new coin, signing, sending, posting or deployment was needed.
+
+Recovered record 30's wall from its public artifact URL and checked its SHA-256.
+Used the imagegen skill and installed image edit adapter to add a worn charcoal
+balance, two ochre pebbles and a flake on vacant upper-left stone. Reused
+`image_bytes.py` and the ancestor preservation approach to keep only generated
+pigment; 4,098 pixels changed, all within the addition. Every older painting,
+hand and pixel outside the addition is exact, as are protected deep fissures.
+Only the required two PNG wall paths and numbered JPEG are saved. Both hands
+retain four fingers and one thumb. Full formats, prompt, hashes, local visual
+review and limitations are in wall-review-31.json and round-31.md. No older
+record or tool changed. Named image outputs remain untracked for upload.

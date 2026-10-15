@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "recordNumber": 31,
+  "wallSha256": "53b0a3335c33b807890bd95ac044dabb202979ce1d48dce213e735b5f0da959d",
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "jpegDimensions": [
+    512,
+    512
+  ],
+  "jpegFormat": "JPEG",
+  "jpegBytes": 78273,
+  "changedAncestorPixels": 4098,
+  "unchangedAncestorPixels": 1568418,
+  "preservation": "All differences bounded to vacant upper-left stone; deep fissures unchanged.",
+  "goalUnchanged": true,
+  "olderRecordsUnchanged": true,
+  "priorToolSourcesUnchanged": true,
+  "imagesUntracked": true,
+  "newFilesUnder100KBOutsideArtifacts": true,
+  "unmetVisualRequirements": [],
+  "behaviorChecks": "21 new tests, 28 ancestor tests, 21 detached tests and detached CLI passed; exact ZTO string CLI exit 0 and numeric-literal representation exit 1."
+}

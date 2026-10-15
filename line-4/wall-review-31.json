@@ -1,0 +1,43 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v11.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3910799,
+    "sha256": "53b0a3335c33b807890bd95ac044dabb202979ce1d48dce213e735b5f0da959d"
+  },
+  "preview": {
+    "path": "dist/line-4/31.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 78273,
+    "sha256": "7544a2bd988894956eaacf5dd92c6068d757b50512a52eb3fba7bd1106f148a1"
+  },
+  "ancestorSha256": "588133156ee1205142e99d24990d6db5f3a15658a3b9c5c6c687145b642e9cb5",
+  "generatedDraftSha256": "f6f307064633cd2fd9a58206967f3e757771b7a32dc001647e6e73cdf4e91cc2",
+  "imageTool": "Installed image edit adapter, request 25dbc735-96ad-4a41-aa79-279446bb8904",
+  "prompt": "Use case: precise-object-edit. Edit target: this inherited square prehistoric cave wall. Preserve the EXACT original 1254 by 1254 size, rock, cracks, warm torch lighting, framing, water, Pepe frog and ALL existing paintings pixel for pixel. Add ONLY a small primitive balance drawn in worn charcoal with two small uneven ochre pebbles hanging at its ends, on the vacant upper-left stone, within x=275..435 and y=90..205 in the original image. This balance represents weighing exact small quantities, including a tiny flake beside one pebble. The new motif is small, simple, thumb-and-burnt-stick marks, earth pigments only, bare rock showing through; not a clean modern icon. Keep all existing pigment and hands absolutely untouched. Pepe remains the wide-mouthed, heavy-lidded frog; both inherited hands retain exactly five digits, four fingers and one thumb. Do not add hands or handprints. No letters, numbers, captions, text, signatures, logos, watermarks, borders, photographs, 3D, real people or political symbols. Outside this one vacant upper-left area change nothing.",
+  "changedPixels": 4098,
+  "unchangedPixels": 1568418,
+  "additionBoundsExclusive": [
+    248,
+    155,
+    415,
+    257
+  ],
+  "preservation": "Every pixel outside the vacant-stone addition and every deep fissure pixel inside is identical to the hash-verified ancestor. Pepe, hands, all ancestral pigment and framing are outside the addition.",
+  "visualReview": "Inspected final 1254-square PNG and decoded 512-square JPEG: recognizable heavy-lidded, wide-mouthed Pepe; counted four fingers and one thumb on each inherited hand. No added hand or handprint. Original warm rough stone, cracks, light, framing, water and all older pigment retained. New worn charcoal balance, ochre pebbles and tiny flake contain no letters, numbers, captions, signatures, logos, watermark, border or prohibited symbol. No known unmet visual requirement; local review only.",
+  "unmetVisualRequirements": [],
+  "limitations": [
+    "Local inspection and byte checks are not independent visual certification.",
+    "Small worn balance is subtle at thumbnail scale.",
+    "Only generated pigment was retained; the full image-tool draft changed rock texture.",
+    "Generated motif appeared lower than the requested location; it remains entirely on vacant upper-left stone."
+  ]
+}
