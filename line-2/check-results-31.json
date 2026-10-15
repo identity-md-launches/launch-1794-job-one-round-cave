@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "local_observations_only": true,
+  "new_record": 31,
+  "record_shape_and_image_hash": true,
+  "goal_byte_identical": true,
+  "older_tracked_files_unchanged": true,
+  "scope_and_file_sizes_checked": true,
+  "wall": {
+    "format": "PNG",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "sha256": "5d94d7b0d39d4e48ec99502b45b4935af33b11f2db8f31e570ee5814105ba63e",
+    "aliases_identical": true
+  },
+  "preview": {
+    "format": "JPEG",
+    "dimensions": [
+      512,
+      512
+    ],
+    "bytes": 73869,
+    "visually_decoded": true
+  },
+  "ancestor_sha256": "ec3417d93687bf199ef6c2391fdd7d7db93393b9306d5bf01647700dec5e737d",
+  "changed_pixels": 1303,
+  "outside_region_exact": true,
+  "dark_cracks_exact": true,
+  "new_tests_passed": 21,
+  "readme_commands_passed": 2,
+  "new_record_strict_contract_passed": true,
+  "unmet_visual_requirements": []
+}

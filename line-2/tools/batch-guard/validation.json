@@ -1,0 +1,92 @@
+{
+  "local_observations_only": true,
+  "tests_passed": 21,
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-guard/test_review.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"matches\": true,\n  \"report_sha256\": \"afe71afb2344c0297d2411fa89a0fe255436d432bf5344705f484ae0c9c47a21\",\n  \"status\": \"batch_report_reproduced\",\n  \"all_documents_valid\": true,\n  \"summary\": {\n    \"checked\": 2,\n    \"passed\": 2,\n    \"failed\": 0,\n    \"unreadable\": 0\n  },\n  \"error_count\": 0\n}\n",
+      "stderr": "test_all_valid (__main__.GuardTests.test_all_valid) ... ok\ntest_bad_counts_and_duplicate_paths (__main__.GuardTests.test_bad_counts_and_duplicate_paths) ... ok\ntest_budgets (__main__.GuardTests.test_budgets) ... ok\ntest_changed_bytes_even_same_value (__main__.GuardTests.test_changed_bytes_even_same_value) ... ok\ntest_changed_contract (__main__.GuardTests.test_changed_contract) ... ok\ntest_cli_actual_demo (__main__.GuardTests.test_cli_actual_demo) ... ok\ntest_contract_also_document_captured_once (__main__.GuardTests.test_contract_also_document_captured_once) ... ok\ntest_contract_before_documents (__main__.GuardTests.test_contract_before_documents) ... ok\ntest_dropped_row (__main__.GuardTests.test_dropped_row) ... ok\ntest_duplicate_report_keys (__main__.GuardTests.test_duplicate_report_keys) ... ok\ntest_embedded_paths_never_read (__main__.GuardTests.test_embedded_paths_never_read) ... ok\ntest_invalid_pin (__main__.GuardTests.test_invalid_pin) ... ok\ntest_malformed_document_fails (__main__.GuardTests.test_malformed_document_fails) ... ok\ntest_missing_property_anchor (__main__.GuardTests.test_missing_property_anchor) ... ok\ntest_mixed_report_reproduced (__main__.GuardTests.test_mixed_report_reproduced) ... ok\ntest_mutations_of_diagnostics_and_summary (__main__.GuardTests.test_mutations_of_diagnostics_and_summary) ... ok\ntest_pin (__main__.GuardTests.test_pin) ... ok\ntest_real_reader_path_boundary (__main__.GuardTests.test_real_reader_path_boundary) ... ok\ntest_real_records (__main__.GuardTests.test_real_records) ... ok\ntest_reordered_documents (__main__.GuardTests.test_reordered_documents) ... ok\ntest_unreadable_report_unsupported (__main__.GuardTests.test_unreadable_report_unsupported) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.032s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-guard/review.py",
+        "line-2/tools/batch-guard/records.report.json",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/29.json",
+        "dist/line-2/30.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"matches\": true,\n  \"report_sha256\": \"afe71afb2344c0297d2411fa89a0fe255436d432bf5344705f484ae0c9c47a21\",\n  \"status\": \"batch_report_reproduced\",\n  \"all_documents_valid\": true,\n  \"summary\": {\n    \"checked\": 2,\n    \"passed\": 2,\n    \"failed\": 0,\n    \"unreadable\": 0\n  },\n  \"error_count\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-guard/review.py",
+        "line-2/tools/batch-guard/mixed.report.json",
+        "line-2/tools/json-contract/report.contract.json",
+        "line-2/tools/json-contract/report.example.json",
+        "line-2/tools/rule-locator/report.invalid.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"matches\": true,\n  \"report_sha256\": \"b9cf2c2a673c515b7b2d7fb24a6c9318e0fa956e01c3bf8b55b6ccb2ef8f5c75\",\n  \"status\": \"batch_report_reproduced\",\n  \"all_documents_valid\": false,\n  \"summary\": {\n    \"checked\": 2,\n    \"passed\": 1,\n    \"failed\": 1,\n    \"unreadable\": 0\n  },\n  \"error_count\": 3\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-guard/review.py",
+        "line-2/tools/batch-guard/records.report.json",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/29.json",
+        "dist/line-2/30.json",
+        "--report-sha256",
+        "afe71afb2344c0297d2411fa89a0fe255436d432bf5344705f484ae0c9c47a21"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"matches\": true,\n  \"report_sha256\": \"afe71afb2344c0297d2411fa89a0fe255436d432bf5344705f484ae0c9c47a21\",\n  \"status\": \"batch_report_reproduced\",\n  \"all_documents_valid\": true,\n  \"summary\": {\n    \"checked\": 2,\n    \"passed\": 2,\n    \"failed\": 0,\n    \"unreadable\": 0\n  },\n  \"error_count\": 0\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-guard/review.py",
+        "line-2/tools/batch-guard/records.report.json",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/30.json",
+        "dist/line-2/29.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "{\n  \"matches\": false,\n  \"report_sha256\": \"afe71afb2344c0297d2411fa89a0fe255436d432bf5344705f484ae0c9c47a21\",\n  \"status\": \"document_set_mismatch\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/batch-source/locate.py",
+        "line-2/tools/ordered-deliverables/record.strict.contract.json",
+        "dist/line-2/31.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"summary\": {\n    \"checked\": 1,\n    \"passed\": 1,\n    \"failed\": 0,\n    \"unreadable\": 0\n  },\n  \"contract\": {\n    \"file\": \"line-2/tools/ordered-deliverables/record.strict.contract.json\",\n    \"bytes\": 3239,\n    \"sha256\": \"3b038e83c270b22a67f7b7d5c89875bbefc458862dd5c785476e9aae34336230\"\n  },\n  \"files\": [\n    {\n      \"file\": \"dist/line-2/31.json\",\n      \"valid\": true,\n      \"error_count\": 0,\n      \"errors\": [],\n      \"sources\": {\n        \"contract\": {\n          \"file\": \"line-2/tools/ordered-deliverables/record.strict.contract.json\",\n          \"bytes\": 3239,\n          \"sha256\": \"3b038e83c270b22a67f7b7d5c89875bbefc458862dd5c785476e9aae34336230\"\n        },\n        \"document\": {\n          \"file\": \"dist/line-2/31.json\",\n          \"bytes\": 690,\n          \"sha256\": \"16801b4fd0abdd9a7a5f8b7b7da5ea5cd0753a25091110f6dcedf2c040c9cff3\"\n        }\n      },\n      \"coordinates\": {\n        \"lines\": \"one-based; LF begins each new line\",\n        \"columns\": \"one-based Unicode code points, not display cells or UTF-16 units\",\n        \"offsets\": \"zero-based; ranges include start and exclude end\",\n        \"encoding\": \"UTF-8; source bytes and CRLF are preserved\"\n      }\n    }\n  ]\n}\n",
+      "stderr": ""
+    }
+  ]
+}

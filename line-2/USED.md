@@ -183,3 +183,27 @@ Restored the record-29 wall from its public artifact URL and verified SHA-256
 before editing. The installed image editor generated the new Pepe head and
 linked pebble marks. Reused line-2/image_bytes.py for pigment composition,
 PNG encoding and the 512-pixel JPEG. No ancestor tool or record was changed.
+
+## Pepe 31 — JSON batch report guard
+
+- Kept GOAL.md and every older tool and record unchanged. Read gathering 10's
+  report; it reported no broken line 2 behavior needing repair.
+- Reused batch-source's prepared batch locator, source-locator's strict parser
+  and source ranges, rule-locator explanations, bounded-contract no-follow reads
+  and json-contract validation. Copied source-guard's no-follow bootstrap and
+  typed tree equality unchanged; no inherited tool was modified.
+- Replayed actual records 29 and 30, and both inherited build-report examples,
+  including the intentional three-violation fixture. Fixtures do not assert
+  real build outcomes. Added 21 tests with memory fixtures and read-only real
+  records. No coin is required for structural validation.
+- Restored record 30's public wall with a dedicated User-Agent and checked its
+  exact SHA-256. Used the imagegen skill and installed image generator for paired
+  pebbles. Reused the inspected line-2/image_bytes.py standard-library encoders
+  for pigment-only composition and JPEG output. Only final wall PNGs and its
+  required JPEG remain. Exactly 1,303 pixels changed on vacant stone; all pixels
+  outside the bounded insertion and protected dark cracks are identical.
+- Reviewed the whole PNG and decoded JPEG. Formats, dimensions, prompt, hashes,
+  preservation checks and visual limitations are in wall-review-31.json.
+- No dependency installation, environment/secret read, wallet access, signing,
+  transaction, payment, external post or deployment was used. Runtime is offline,
+  standard-library Python plus ordinary unchanged sibling sources.

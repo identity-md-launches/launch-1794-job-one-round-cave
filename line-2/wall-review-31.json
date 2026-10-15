@@ -1,0 +1,46 @@
+{
+  "number": 31,
+  "ancestor_sha256": "ec3417d93687bf199ef6c2391fdd7d7db93393b9306d5bf01647700dec5e737d",
+  "sha256": "5d94d7b0d39d4e48ec99502b45b4935af33b11f2db8f31e570ee5814105ba63e",
+  "wall": {
+    "paths": [
+      "artifacts/line-2/wall.png",
+      "artifacts/line-2/wall-v11.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB"
+  },
+  "preview": {
+    "path": "dist/line-2/31.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 73869
+  },
+  "addition_region": {
+    "x": 1035,
+    "y": 770,
+    "width": 170,
+    "height": 195
+  },
+  "changed_pixels": 1303,
+  "unchanged_pixels": 1571213,
+  "outside_region_pixel_identical": true,
+  "dark_cracks_preserved": true,
+  "generation_tool": "mcp__image__generate_image",
+  "draft_sha256": "536d1ed31f8762fa1cbb733e8f13d792325ced1cc144bc94389db5c3053e26b3",
+  "generated_dimensions": [
+    1536,
+    1024
+  ],
+  "draft_retained": false,
+  "visual_review": "Inspected complete PNG and decoded 512-pixel JPEG. Ancestral Pepes, rock, cracks, warm light, water and framing retained. Added worn charcoal-and-ochre paired pebbles on vacant lower-right stone; the motif is subtle in shadow. No text, numbers, signatures, logos, watermarks, image borders, real people or forbidden symbols observed. No hands or handprints introduced; no new digits to count.",
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Visual review is subjective, not independent certification.",
+    "The new motif is intentionally subtle on shadowed stone."
+  ],
+  "prompt": "A sparse prehistoric cave painting motif, flat earth pigments on light warm ochre rough stone. Three small pairs of pebbles, arranged as three horizontal rows. Each pair has one charcoal-black irregular outline pebble on the left and one red-ochre thumbprint pebble on the right, with a short uneven charcoal line linking each pair. A single large rough charcoal oval encircles all six pebbles, expressing checking a whole group against its remembered marks. Entire motif centered, fully visible with generous bare rock margins, contained in middle 75 percent of canvas. Handmade burnt-stick strokes, faded broken pigment, stone showing through. Lascaux torchlit feeling. No text, no letters, no numbers, no signatures, no logos, no borders or frame, no hands, no characters, no photoreal objects, no 3D. Simple six pebbles and enclosing charcoal oval only."
+}
