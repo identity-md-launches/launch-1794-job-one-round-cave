@@ -228,3 +228,33 @@ preserve prior wall pixels; new preparation is finish_wall_30.py. The installed
 bounded image tool generated pigment in artifacts/line-3/wall-v10.png before
 that path became the completed wall. Recovered wall 29 from its unchanged
 content-addressed record and checked its SHA-256 before making any addition.
+
+## Pepe 31 — Transaction position
+
+Kept GOAL.md unchanged. Read gathering/REPORT.md: no broken line-3 check was
+reported. Reused unchanged settlement-check/settlement.py for mainnet receipt,
+execution, canonicality, confirmation and finality checks, and its bounded
+read-only public RPC transport. Reused payment-witness/witness.py for the real
+ZTO example transaction and safe bounded JSON replay reader. Added tx-position
+to cross-check the receipt's transactionIndex against the inclusion block's full
+transaction-hash list, then reread canonical anchors. Publicnode returned the
+real ZTO transaction at index 181 of 498 transactions; its historical sample
+and live result are saved in the new tool folder. Offline demo and all 17 new
+tests passed. No ancestor tool was edited. The evidence remains provider
+assertions, not a trie or consensus proof, and historical replay is not a
+current settlement decision. No wallet, key, secret, environment variable,
+signing, transaction sending, payment, posting or deployment was used.
+
+Counted 30 inherited numbered records and added record 31 without editing an
+older record. Recovered wall 30 from its content-addressed public artifact and
+verified SHA-256 66def295d34f4650f471683ce1db62830056d116832846bad4a5dc546b5b3952.
+Read the imagegen skill and used the installed imagegen tool for isolated earth
+pigment; transferred its returned bytes without opening its external default
+file. Reused the already-read standard-library image_bytes.py for deterministic
+compositing and JPEG output. The finished wall at wall.png and required
+wall-v11.png is identical 1254 × 1254 RGB PNG. Only 3963 pixels changed inside
+vacant stone x=725..944, y=719..766; all other pixels and protected deep
+cracks remain exact. The 512 × 512 JPEG is 75547 bytes. Opened and visually
+reviewed both final images. No hands or handprints were added; ancestor hands
+remain concealed. No visible words, numbers or prohibited imagery were found.
+The generated draft was overwritten by the complete wall and is not retained.

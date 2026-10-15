@@ -1,0 +1,41 @@
+{
+  "ancestorSha256": "66def295d34f4650f471683ce1db62830056d116832846bad4a5dc546b5b3952",
+  "ancestorDimensions": [
+    1254,
+    1254
+  ],
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "17ca259cb868bf342098cedc6e00cdf429bc6e835f9c24dee0343afb9dfe6fe4",
+  "generatedDraftSha256": "1d9dc49d1a88f44ee683a83ee8cf63ce7813bd63a799efd0b00c2a006334f09b",
+  "draftRetained": false,
+  "additionRectangle": [
+    725,
+    719,
+    220,
+    48
+  ],
+  "changedPixels": 3963,
+  "unchangedPixels": 1568553,
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewDimensions": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 75547,
+  "previewQuality": 52,
+  "imageTool": "image_gen.imagegen",
+  "prompt": "On a pure white square field, isolated small prehistoric pigment mark: five uneven charcoal pebble daubs side by side in a simple horizontal row, with a worn red ochre ring around the middle pebble. Flat hand-made Lascaux-like mineral pigments, no rock background, generous white margin. No words, letters, numbers, symbols, arrows, signatures, logos, watermark, borders, hands, people or frog.",
+  "reviewStatus": "Visually inspected the complete PNG and decoded 512-pixel JPEG.",
+  "unmetVisualRequirements": [],
+  "visibleFigure": "Ancestor Pepe retained with broad mouth and heavy-lidded eyes.",
+  "hands": "No hands or handprints added. Ancestor hands are concealed; no visible digits to count.",
+  "prohibitedElementsObserved": [],
+  "preservation": "All pixels outside the addition rectangle and all protected dark pixels inside remain unchanged; no ancestor mark was erased, moved or redrawn."
+}
